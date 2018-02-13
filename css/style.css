@@ -1,0 +1,86 @@
+html, body {
+     height: 100%;
+}
+ h2 {
+     padding-right: 50px;
+}
+ #map {
+     height: 100%;
+}
+ #TitleName{
+     position: fixed;
+     top: -10px;
+     left: 150px;
+}
+ #menu {
+     position: fixed;
+     height: 600px;
+     overflow: auto;
+     top: 85px;
+     left: 8px;
+     width: 240px;
+     background-color: #7e7e7e;
+     font-size: 15px;
+}
+ #filter {
+     position: fixed;
+     left: 8px;
+     top: 45px;
+     height: 30px;
+     width: 250px;
+     font-size: 15px;
+}
+ #list-place {
+     color: white ;
+}
+ #error {
+     position: fixed;
+     top: 350px;
+     left: 5%;
+     width: 20%;
+}
+ @media only screen and (max-width: 650px) {
+     h2 {
+         position: fixed;
+         font-size: 15px;
+    }
+     #hamburger {
+         position: fixed;
+         left: 85%;
+         top: 7%;
+         width: 40px;
+    }
+     #menu {
+         position: fixed;
+         height: 150px;
+         overflow: auto;
+         top: 400px;
+         left: 8px;
+         width: 150px;
+         background-color: #7e7e7e;
+         font-size: 15px;
+    }
+     #TitleName {
+         position: fixed;
+         top: -5px;
+         width: 30%;
+         left: 5%;
+    }
+     #filter {
+         position: fixed;
+         left: 8px;
+         top: 45px;
+         height: 30px;
+         width: 150px;
+         font-size: 12px;
+    }
+     .navClosed {
+         display: none;
+    }
+     #error {
+         position: fixed;
+         top: 320px;
+         left: 5%;
+         width: 30%;
+    }
+}
