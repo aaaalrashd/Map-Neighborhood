@@ -132,11 +132,14 @@ var ViewModel = function() {
                     map.setCenter(placeItem.marker.getPosition());
                 });
             },
+            error: function() {
+            document.getElementById("error").innerHTML = "<h3>some data is unavailable. Please try again.</h3>";
+        }
         });
-
         google.maps.event.addListener(marker, 'click', function() {
             infowindow.open(map, this);
             placeItem.marker.setAnimation(google.maps.Animation.BOUNCE);
+            infowindow.setContent("<h3>Oops, data is unavailable. Please visit by use foursquare :(</h3>");
         });
     });
 
@@ -172,7 +175,7 @@ var ViewModel = function() {
     //  Filter by user //
     self.userInput = ko.observable('');
     self.filterMarkers = function() {
-        var searchInput = self.userInput();
+        var searchInput = self.userInput().toLowerCase(); // Search in small letter and capital //
         self.visible.removeAll();
         self.placeList().forEach(function(place) {
             place.marker.setVisible(false);

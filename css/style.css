@@ -4,6 +4,9 @@ html, body {
  h2 {
      padding-right: 50px;
 }
+h3 {
+    color: darkred;
+}
  #map {
      height: 100%;
 }
